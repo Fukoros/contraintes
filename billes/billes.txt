@@ -1,0 +1,54 @@
+/*****************************************************
+Enoncé du problème :  
+
+Quatre enfants, Anne, Bernard, Claudine et Denis, ayant tous un âge différent 
+(entre 4 et 7 ans), jouent chacun à différents endroits avec des billes de 
+couleur bleue, jaune, noire ou rouge. On sait de plus que : 
+
+1. Denis joue dans le parc et n’a pas 4 ans, contrairement à
+   l’enfant qui a des billes bleues.
+
+2. La fille de 6 ans a des billes jaunes.
+
+3. L’enfant qui joue avec des billes noires est plus âgé que l’enfant qui joue 
+   dans le jardin mais plus jeune que Anne.
+
+4. Anne, qui joue dans sa chambre, a 1 an de plus que l’enfant qui joue dans le salon.
+
+
+(NB : l'énoncé vous est rappelé pour que vous puissiez copier/coller tel quel 
+	  les phrases de l'énoncé dans vos modèles)
+
+*********************************************************/
+
+/* Formalisation en tant que problème de satisfaction de contraintes */
+
+X = {
+	Anne, Bernard, Claudine, Denis
+    jaune, rouge, noire, bleue
+    parc, jardin, chambre, salon
+}
+	
+D = {d,...,d}
+    avec d=4..7
+
+
+C =  {
+    #Différences
+    Anne!=Bernard, Anne!=Claudine, Anne!=Denis, Bernard!=Claudine, Bernard!=Denis, Claudine!=Denis
+    jaune!=rouge, jaune!=noire, jaune!=bleue, rouge!=noire, rouge!=bleue, noire!=bleue
+    parc!=jardin, parc!=chambre, parc!=salon, jardin!=chambre, jardin!=salon, chambre!=salon
+    
+    #Denis joue dans le parc et n’a pas4ans, contrairement à l’enfant qui a des billes bleues
+    Denis=parc, Denis!=4, bleue=4
+
+    #La fille de 6 ans a des billes jaunes
+    jaune=6; Anne=6 or Claudine==6
+
+    #L’enfant qui joue avec des billes noires est plus âgé que l’enfant qui joue dans le jardin mais plusjeune que Anne
+    noire>jardin, noire<Anne
+
+    #Anne, qui joue dans sa chambre, a1an de plus que l’enfant qui joue dans le salon
+    Anne=chambre, Anne>salon, chambre>salon (?)
+
+}
