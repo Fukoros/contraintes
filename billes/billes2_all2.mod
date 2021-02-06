@@ -60,4 +60,4 @@ constraints {
 }
 
 /* Post-traitement (Affichage Solution) */
-include "./../shared/allSolutions.mod"
+include "./../shared/allSolutions.mod";
