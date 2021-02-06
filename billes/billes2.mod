@@ -28,49 +28,51 @@ execute {
 /* Contraintes */
 constraints {
 	/* Difference */
-	forall (ordered i, j in Name) 
+	forall (ordered i, j in Name)
 		Var[i] != Var[j];
-	forall (ordered i, j in Color) 
+	forall (ordered i, j in Color)
 		Var[i] != Var[j];
-	forall (ordered i, j in Place) 
+	forall (ordered i, j in Place)
 		Var[i] != Var[j];
 
 	/*Denis joue dans le parc et n’a pas4ans, contrairement à l’enfant qui a des billes bleues*/
-    	Var["Denis"] == Var["Parc"]; 
-	Var["Denis"]!=4; 
+    	Var["Denis"] == Var["Parc"];
+	Var["Denis"]!=4;
 	Var["Bleue"] == 4;
 
 	/*La fille de 6 ans a des billes jaunes*/
-    	Var["Jaune"] == 6; 
+    	Var["Jaune"] == 6;
 	Var["Bernard"] != 6;
 	Var["Denis"] != 6;
 
 	/*L’enfant qui joue avec des billes noires est plus âgé que l’enfant qui joue dans le jardin mais plusjeune que Anne*/
-    	Var["Noire"] > Var["Jardin"]; 
+    	Var["Noire"] > Var["Jardin"];
 	Var["Noire"] < Var["Anne"];
 
 	/*Anne, qui joue dans sa chambre, a1an de plus que l’enfant qui joue dans le salon*/
-    	Var["Anne"] == Var["Chambre"]; 
-	Var["Anne"] > Var["Salon"]; 
-	Var["Chambre"] > Var["Salon"]; 
-	
+    	Var["Anne"] == Var["Chambre"];
+	Var["Anne"] > Var["Salon"];
+	Var["Chambre"] > Var["Salon"];
+
 
 }
 
 
 /* Post-traitement (Affichage Solution) */
 execute {
-	for (var i in nomVar){
-		writeln(i," = ", Var[i]);
-	}
+	writeln("Anne = ", Anne);
+	writeln("Bernard = ", Bernard);
+	writeln("Claudine = ", Claudine);
+	writeln("Denis = ", Denis);
+
+	writeln("Jaune = ", Jaune);
+	writeln("Rouge = ", Rouge);
+	writeln("Bleue = ", Bleue);
+	writeln("Noire = ", Noire);
+
+	writeln("Jardin = ", Jardin);
+	writeln("Salon = ", Salon);
+	writeln("Parc = ", Parc);
+	writeln("Chambre = ", Chambre);
+
 }
-
-main {
-	thisOplModel.generate();
-	cp.startNewSearch();
-	while(cp.next()) {
-		thisOplModel.postProcess();
-	}
-}
-
-
