@@ -41,7 +41,7 @@ constraints{
 
   // diagonales
   sum(value in index) Cases[value][value] == cste;
-  sum(value in index) Cases[n-value+1][value] = cste;
+  sum(value in index) Cases[n-value+1][value] == cste;
 }
 
 //----- Post-traitement -----
