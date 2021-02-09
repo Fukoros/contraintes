@@ -12,5 +12,5 @@
       thisOplModel.postProcess();
     count+=1;
   }
-  writeln("We have ",count," solution(s).")
+  writeln("We have ",count," solution(s).");
  }
