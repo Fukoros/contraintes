@@ -44,7 +44,7 @@ constraints{
   }*/
 
   //Line 1 == col 1
-  //sum(value in index) Cases[1][value] == sum(value in index) Cases[value][1];
+  sum(value in index) Cases[1][value] == sum(value in index) Cases[value][1];
 
   //Line 1 == diago 1
   //sum(value in index) Cases[1][value] == sum(value in index) Cases[value][value];
