@@ -34,9 +34,13 @@ constraints {
 /*** Post-traitement  ***/
 execute {
   writeln("New solution");
-  for (var i in d){
-    for (var j in d){
-      writeln(i,"-",j" = ", Cases[i][j]);
-    }
-  }
+  writeln(Cases);
+}
+
+main {
+ thisOplModel.generate();
+ cp.startNewSearch();
+ while(cp.next()) {
+   thisOplModel.postProcess();
+ }
 }
