@@ -17,7 +17,10 @@ execute {
 int n = 3;
 range index = 1..n;
 range d_var = 1..n*n;
-int cste = (n*(n*n+1))/2;
+float cste = (n*(n*n+1))/2;
+execute{
+  writeln(cste);
+}
 
 //----- Variables et domaines -----
 dvar int Cases[index][index] in d_var;
