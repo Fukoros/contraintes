@@ -13,6 +13,7 @@ using CP;
 execute {
 	cp.param.searchType = "DepthFirst";
 	cp.param.workers = 1;
+	cp.param.logPeriod = "Quiet"
 }
 
 //----- Données du problème -----
@@ -35,7 +36,8 @@ constraints {
   /*Ouest*/
   (Var["O"] + Var["N-O"] + Var["S-O"]) >= mini_y;
 
-	sum( name in nomVar ) Var[name] == 12;
+	/*Somme des toutes les positions*/
+	sum( name in nomVar ) Var[name] == n;
 }
 
 //----- Post-traitement -----
