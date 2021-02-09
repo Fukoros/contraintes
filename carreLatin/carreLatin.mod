@@ -15,6 +15,7 @@ execute {
 
 /*** Variables et domaines  ***/
 dvar int Cases[d][d] in d;
+int cpt_solution = 0;
 
 /*** Contraintes  ***/
 constraints {
@@ -27,7 +28,8 @@ constraints {
 
 /*** Post-traitement  ***/
 execute {
-  writeln("New solution");
+  cpt_solution += 1;
+  writeln("Solution", cpt_solution);
   writeln("\t",Cases);
 }
 
