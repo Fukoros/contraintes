@@ -7,6 +7,12 @@ using CP;
 int n = 3;
 range d = 1..n;
 
+/* Paramétrage du solveur */
+execute {
+	cp.param.searchType = "DepthFirst";
+	cp.param.workers = 1;
+}
+
 /*** Variables et domaines  ***/
 dvar int Cases[d][d] in d;
 
