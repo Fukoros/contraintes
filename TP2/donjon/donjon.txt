@@ -17,9 +17,25 @@ Soldat_1
 ...
 Soldat_12
 
-
 Domaine : D = {d,...,d}
 avec d = {N, N-E, E, S-E, S, S-O, O, O-N}
-d = {1, 2, 3, 4, 5, 6, 7, 8}
+d_traduit = {1, 2, 3, 4, 5, 6, 7, 8}
 
 Contraintes :
+Sud
+|Soldat_x != N and Soldat_x != N-E and Soldat_x != E and Soldat_x != O and Soldat_x != N-O| >= 5
+
+-> Pas intérressant car on a plein de symmétrie 
+
+Variable :
+N, N-E, E, S-E, S, S-O, O, O-N
+
+Domaine :
+D = {d, ..., d}
+avec d = 0...12
+
+Contraintes :
+var >= 5
+
+
+

@@ -11,6 +11,9 @@ range d = 1..n;
 execute {
 	cp.param.searchType = "DepthFirst";
 	cp.param.workers = 1;
+  cp.param.log.Verbosity = "Quiet";
+  /*
+  cp.param.logPeriod = <int> */
 }
 
 /*** Variables et domaines  ***/
