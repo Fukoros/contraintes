@@ -27,7 +27,7 @@ int mini_y = 5;
 dvar int Var[nomVar] in d;
 
 //----- Contraintes -----
-constraints {
+/**constraints {
   /*Nord*/
   (Var["N"] + Var["N-E"] + Var["N-O"]) >= mini_y;
   /*Est*/
@@ -36,7 +36,7 @@ constraints {
   (Var["S"] + Var["S-E"] + Var["S-O"]) >= mini_y;
   /*Ouest*/
   (Var["O"] + Var["N-O"] + Var["S-O"]) >= mini_y;
-}
+}**/
 
 //----- Post-traitement -----
 execute {
@@ -47,10 +47,4 @@ execute {
   writeln(Var["S-O"], "-", Var["S"], "-", Var["S-E"]);
 }
 
-main {
- thisOplModel.generate();
- cp.startNewSearch();
- while(cp.next()) {
-	 thisOplModel.postProcess();
- }
-}
+include "./../shared/allSolutions.mod";
