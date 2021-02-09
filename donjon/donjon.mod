@@ -47,4 +47,10 @@ execute {
   writeln(Var["S-O"], "-", Var["S"], "-", Var["S-E"]);
 }
 
-include "./../shared/allSolutions.mod";
+main {
+ thisOplModel.generate();
+ cp.startNewSearch();
+ while(cp.next()) {
+	 thisOplModel.postProcess();
+ }
+}
