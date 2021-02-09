@@ -46,4 +46,4 @@ execute {
   }
 }
 
-include "./../../shared/displayFirstAndCountSolutions.mod";
+include "./../../shared/allSolutions.mod";
