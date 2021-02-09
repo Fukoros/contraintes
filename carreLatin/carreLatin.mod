@@ -20,11 +20,15 @@ constraints {
 		    Cases[i][j] != Cases[i][k];
 
   /* Columns */
-	forall (i in d)
-  	forall (j in d)
-  	 forall (k in d)
-      if (i!=j)
+	forall (i in d) {
+  	forall (j in d) {
+  	 forall (k in d) {
+       if (i!=j) {
 		    Cases[i][k] != Cases[j][k];
+        }
+      }
+    }
+  }
 }
 
 /*** Post-traitement  ***/
