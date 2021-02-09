@@ -55,4 +55,4 @@ execute {
   writeln("\t",Case);
 }
 
-include "./../../shared/displayFirstAndCountSolutions.mod";
+include "./../shared/displayFirstAndCountSolutions.mod";
