@@ -14,7 +14,7 @@ execute {
 }
 
 //----- Données du problème -----
-int n = 3;
+int n = 4;
 range index = 1..n;
 range d_var = 1..n*n;
 float cste = (n*(n*n+1))/2;
@@ -52,5 +52,5 @@ execute {
   writeln("\t",Cases);
 }
 
-//include "./../shared/displayFirstAndCountSolutions.mod";
-include "./../shared/allSolutions.mod";
+include "./../shared/displayFirstAndCountSolutions.mod";
+//include "./../shared/allSolutions.mod";
