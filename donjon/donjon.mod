@@ -40,12 +40,6 @@ constraints {
 }
 
 //----- Post-traitement -----
-execute {
-  writeln(Var["N-O"],"-",Var["N"],"-",Var["N-E"]);
-  writeln("|","   ","|");
-  writeln("Var["O"]","   ","Var["E"]");
-  writeln("|","   ","|");
-  writeln(Var["S-O"],"-",Var["S"],"-",Var["S-E"]);
-}
+
 
 include "./../shared/allSolutions.mod";
