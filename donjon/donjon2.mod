@@ -13,7 +13,7 @@ using CP;
 execute {
 	cp.param.searchType = "DepthFirst";
 	cp.param.workers = 1;
-	cp.param.logPeriod = "Quiet"
+	cp.param.logPeriod = "Quiet";
 }
 
 //----- Données du problème -----
