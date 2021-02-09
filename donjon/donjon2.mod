@@ -36,7 +36,7 @@ constraints {
   /*Ouest*/
   (Var["O"] + Var["N-O"] + Var["S-O"]) >= mini_y;
 	/*Somme des toutes les positions*/
-	sum( name in nomVar ) Var[name] == 12;
+	(sum( name in nomVar ) Var[name]) == 12;
 }
 
 //----- Post-traitement -----
