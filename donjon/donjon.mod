@@ -29,13 +29,13 @@ dvar int Var[nomVar] in d;
 //----- Contraintes -----
 constraints {
   /*Nord*/
-  Var["N"] + Var["N-E"] + Var["N-O"] >= mini_y;
+  (Var["N"] + Var["N-E"] + Var["N-O"]) >= mini_y;
   /*Est*/
-  Var["E"] + Var["N-E"] + Var["S-E"] >= mini_y;
+  (Var["E"] + Var["N-E"] + Var["S-E"]) >= mini_y;
   /*Sud*/
-  Var["S"] + Var["S-E"] + Var["S-O"] >= mini_y;
+  (Var["S"] + Var["S-E"] + Var["S-O"]) >= mini_y;
   /*Ouest*/
-  Var["O"] + Var["N-O"] + Var["S-O"] >= mini_y;
+  (Var["O"] + Var["N-O"] + Var["S-O"]) >= mini_y;
 }
 
 //----- Post-traitement -----
