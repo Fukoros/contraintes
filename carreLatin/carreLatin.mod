@@ -29,7 +29,7 @@ constraints {
 /*** Post-traitement  ***/
 execute {
   cpt_solution += 1;
-  writeln("Solution", cpt_solution);
+  writeln("Solution : ", cpt_solution);
   writeln("\t",Cases);
 }
 
