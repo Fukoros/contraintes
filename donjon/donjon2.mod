@@ -38,10 +38,11 @@ constraints {
 	/*Somme des toutes les positions*/
 	(sum( nom in nomVar ) Var[nom]) == 12;
 
+	//Symetries
 	/*Le coin en haut a gauche doit etre le plus grand*/
-	Var["N-E"] >= Var["S-E"]
-	Var["N-E"] >= Var["S-O"]
-	Var["N-E"] >= Var["N-O"]
+	Var["N-E"] >= Var["S-E"];
+	Var["N-E"] >= Var["S-O"];
+	Var["N-E"] >= Var["N-O"];
 }
 
 //----- Post-traitement -----
