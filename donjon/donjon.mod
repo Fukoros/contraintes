@@ -47,4 +47,4 @@ execute {
   writeln(Var["S-O"], "-", Var["S"], "-", Var["S-E"]);
 }
 
-include "./../shared/allSolutions.mod";
+include "./../shared/displayFirstAndCountSolutions.mod";
