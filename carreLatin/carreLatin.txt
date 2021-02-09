@@ -13,3 +13,19 @@ Un exemple de carré latin d'ordre 3 :
 	3  2  1
 
 *********************************************/
+
+
+Variables :
+1_1 1_2 1_3
+2_1 2_2 2_3
+3_1 3_2 3_3
+-> x_y avec x et y allant de 1 à n
+
+Domaines : D={d,...,d}
+ 	avec d = {1,2,3}
+
+dire que 1_1 = 1_2 veut dire que les deux cases ont le même élément
+
+Contraintes :
+x_y != x_z
+x_y != z_x

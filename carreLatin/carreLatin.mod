@@ -4,13 +4,44 @@
 using CP;
 
 /*** Données du problème  ***/
-// TODO
- 
+int n = 3;
+range d = 1..n;
+
 /*** Variables et domaines  ***/
-// TODO
+dvar int Cases[d][d] in d;
 
 /*** Contraintes  ***/
-// TODO
+constraints {
+  /*Lines*/
+	forall (i in d)
+  	forall (j in d)
+  	 forall (k in d)
+      if (j!=k)
+		    Cases[i][j] != Cases[i][k];
+
+  /* Columns */
+	forall (i in d)
+  	forall (j in d)
+  	 forall (k in d)
+      if (i!=j)
+		    Cases[i][k] != Cases[j][k];
+}
 
 /*** Post-traitement  ***/
-// TODO
+execute {
+  writeln("Solution n :", cpt_solution);
+  cpt_solution = cpt_solution+1;
+  for (var i in d){
+    for (var j in d){
+      writeln(i,"-",j" = ", Cases[i][j]);
+    }
+  }
+}
+
+main {
+ thisOplModel.generate();
+ cp.startNewSearch();
+ while(cp.next()) {
+   thisOplModel.postProcess();
+ }
+}
