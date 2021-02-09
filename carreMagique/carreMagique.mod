@@ -39,9 +39,9 @@ constraints{
   }
 
   // diagonales
-  /*forall (i in index : i>1){
+  forall (i in index){
     sum(value in index) Cases[i][i] == sum(value in index) Cases[n-i+1][n-i+1];
-  }*/
+  }
 
   //Line 1 == col 1
   sum(value in index) Cases[1][value] == sum(value in index) Cases[value][1];
