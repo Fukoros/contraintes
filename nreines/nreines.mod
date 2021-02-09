@@ -17,7 +17,7 @@ int n = 4;
 
 //----- Variables et domaines -----
 range d = 1..n;
-dvar int lines[n] in d;
+dvar int lines[d] in d;
 
 //----- Contraintes -----
 constraints{
