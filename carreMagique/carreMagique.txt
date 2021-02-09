@@ -1,10 +1,31 @@
 /*********************************************
-Enoncé du problème :  
+Enoncé du problème :
 
-Un carré magique d’ordre n est une grille carrée de taille n*n, 
+Un carré magique d’ordre n est une grille carrée de taille n*n,
 dont chaque case contient un entier compris entre 1 et n^2 de telle façon que  :
-- les sommes des éléments situés sur chaque ligne, 
-- les sommes des éléments situés sur chaque colonne, 
-- et les sommes des éléments situés sur chacune des deux diagonales du carré 
+- les sommes des éléments situés sur chaque ligne,
+- les sommes des éléments situés sur chaque colonne,
+- et les sommes des éléments situés sur chacune des deux diagonales du carré
 ... soient toutes identiques.
 *********************************************/
+
+Variables
+Case x y
+avec x et y compris entre 1etn
+
+
+domaines
+D={d,...,d}
+avec d = 1..n
+
+contraintes
+//Lines
+sum(Case_x_y) sur y == sum(Case_z_y) sur y
+
+//Colonnes
+sum(Case_y_x) sur y == sum(Case_y_z) sur y
+
+//diagonales
+sum(Case_x_x) sur X == sum(Case_y_y) sur y
+
+//diago == colonnes == lines
