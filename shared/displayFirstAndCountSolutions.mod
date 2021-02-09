@@ -11,6 +11,7 @@
     if (count == 0) {
       thisOplModel.postProcess();
     }
+    count+=1
   }
   writeln("We have ",count," solution(s).");
  }
