@@ -43,6 +43,10 @@ constraints {
 	Var["N-E"] >= Var["S-E"];
 	Var["N-E"] >= Var["S-O"];
 	Var["N-E"] >= Var["N-O"];
+
+	/*Le coin en haut a droite doit etre le plus grand des restes*/
+	Var["N-E"] >= Var["S-O"];
+	Var["N-E"] >= Var["S-E"];
 }
 
 //----- Post-traitement -----
