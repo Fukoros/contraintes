@@ -36,4 +36,4 @@ execute {
   writeln("\t",Cases);
 }
 
-include "./../shared/allSolutions.mod";
+include "./../../shared/allSolutions.mod";
