@@ -8,8 +8,9 @@
   thisOplModel.generate();
   cp.startNewSearch();
   while(cp.next()) {
-    if (count == 0)
+    if (count == 0) {
       thisOplModel.postProcess();
+    }
   }
   writeln("We have ",count," solution(s).");
  }
