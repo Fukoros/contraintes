@@ -4,7 +4,7 @@
  *********************************************/
 
  main {
-  count = 0;
+  var count = 0;
   thisOplModel.generate();
   cp.startNewSearch();
   while(cp.next()) {
