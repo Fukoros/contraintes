@@ -18,7 +18,7 @@ execute {
 
 //----- Données du problème -----
 int n = 12;
-range d = 1..n;
+range d = 0..n;
 int mini_y = 5;
 
 //----- Variables et domaines -----
@@ -36,7 +36,7 @@ constraints {
   /*Ouest*/
   (Var["O"] + Var["N-O"] + Var["S-O"]) >= mini_y;
 	/*Somme des toutes les positions*/
-	(sum( name in nomVar ) Var[name]) == 12;
+	(sum( nom in nomVar ) Var[nom]) == 12;
 }
 
 //----- Post-traitement -----
