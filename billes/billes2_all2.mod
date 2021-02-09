@@ -60,4 +60,12 @@ constraints {
 }
 
 /* Post-traitement (Affichage Solution) */
+execute {
+  writeln("Solution n :", cpt_solution);
+  cpt_solution = cpt_solution+1;
+ for (var i in nomVar){
+   writeln(i," = ", Var[i]);
+ }
+}
+
 include "./../shared/allSolutions.mod";

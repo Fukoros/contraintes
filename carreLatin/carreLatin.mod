@@ -13,21 +13,9 @@ dvar int Cases[d][d] in d;
 /*** Contraintes  ***/
 constraints {
   /*Lines*/
-	forall (i in d)
-  	forall (j in d)
-  	 forall (k in d)
-      if (j!=k)
-		    Cases[i][j] != Cases[i][k];
-
-  /* Columns */
-	forall (i in d) {
-  	forall (j in d) {
-  	 forall (k in d) {
-       if (i!=j) {
-		    Cases[i][k] != Cases[j][k];
-        }
-      }
-    }
+	forall (i, j, k in d : j < k){
+    Cases[i][j] != Cases[i][k];
+    Cases[j][i] != Cases[k][i];
   }
 }
 
@@ -37,10 +25,4 @@ execute {
   writeln(Cases);
 }
 
-main {
- thisOplModel.generate();
- cp.startNewSearch();
- while(cp.next()) {
-   thisOplModel.postProcess();
- }
-}
+include "./../shared/allSolutions.mod";
