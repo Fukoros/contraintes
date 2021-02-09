@@ -29,8 +29,7 @@ constraints {
 
 /*** Post-traitement  ***/
 execute {
-  writeln("Solution n :", cpt_solution);
-  cpt_solution = cpt_solution+1;
+  writeln("New solution");
   for (var i in d){
     for (var j in d){
       writeln(i,"-",j" = ", Cases[i][j]);
