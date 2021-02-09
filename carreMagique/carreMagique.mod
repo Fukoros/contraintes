@@ -14,7 +14,7 @@ execute {
 }
 
 //----- Données du problème -----
-int n = 4;
+int n = 3;
 range index = 1..n;
 range d_var = 1..n*n;
 
