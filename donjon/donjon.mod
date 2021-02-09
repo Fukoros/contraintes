@@ -14,7 +14,7 @@ execute {
 	cp.param.searchType = "DepthFirst";
 	cp.param.workers = 1;
   /*cp.param.logVerbosity = "Quiet";*/
-  cp.param.logPeriod = 1000;
+  cp.param.logPeriod = 1000000;
 }
 
 //----- Données du problème -----
