@@ -47,5 +47,5 @@ execute {
   }
 }
 
-include "./../shared/displayFirstAndCountSolutions.mod";
-//include "./../shared/allSolutions.mod";
+//include "./../shared/displayFirstAndCountSolutions.mod";
+include "./../shared/allSolutions.mod";
