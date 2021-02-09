@@ -52,7 +52,7 @@ constraints{
 
 //----- Post-traitement -----
 execute {
-  writeln("\t",Case);
+  writeln("\t",Cases);
 }
 
 include "./../shared/displayFirstAndCountSolutions.mod";
