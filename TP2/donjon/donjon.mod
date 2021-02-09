@@ -41,9 +41,11 @@ constraints {
 
 //----- Post-traitement -----
 execute {
-  for (var i in nomVar){
-   writeln(i," = ", Var[i]);
-  }
+  writeln(Var["N-O"],"-",Var["N"],"-",Var["N-E"]);
+  writeln("|","   ","|");
+  writeln("Var["O"]","   ","Var["E"]");
+  writeln("|","   ","|");
+  writeln(Var["S-O"],"-",Var["S"],"-",Var["S-E"]);
 }
 
 include "./../../shared/allSolutions.mod";
