@@ -36,7 +36,14 @@ constraints{
 //----- Post-traitement -----
 execute {
   for (var i in d){
-    writeln(i, "-", lines[i]);
+    for (var j in d){
+      if (lines[i] == j){
+        write("o ");
+      } else {
+        write("x ");
+      }
+    }
+    write("\n");
   }
 }
 
