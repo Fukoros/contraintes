@@ -24,7 +24,7 @@ range d = 1..n;
 int mini_y = 5;
 
 //----- Variables et domaines -----
-{string} nomVar = {"N", "N-E", "E", "S-E", "S", "S-O", "O", "N-O"}
+{string} nomVar = {"N", "N-E", "E", "S-E", "S", "S-O", "O", "N-O"};
 dvar int Var[nomVar] in d;
 
 //----- Contraintes -----
