@@ -13,9 +13,8 @@ using CP;
 execute {
 	cp.param.searchType = "DepthFirst";
 	cp.param.workers = 1;
-  cp.param.logVerbosity = "Quiet";
-  /*
-  cp.param.logPeriod = <int> */
+  /*cp.param.logVerbosity = "Quiet";
+  cp.param.logPeriod = 1000;
 }
 
 //----- Données du problème -----
@@ -40,6 +39,12 @@ constraints {
 }
 
 //----- Post-traitement -----
-
+execute {
+  writeln(Var["N-O"],"-",Var["N"],"-",Var["N-E"]);
+  writeln("|","   ","|");
+  writeln("Var["O"]","   ","Var["E"]");
+  writeln("|","   ","|");
+  writeln(Var["S-O"],"-",Var["S"],"-",Var["S-E"]);
+}
 
 include "./../shared/allSolutions.mod";
