@@ -13,7 +13,6 @@ using CP;
 execute {
 	cp.param.searchType = "DepthFirst";
 	cp.param.workers = 1;
-  cp.param.logVerbosity = "Quiet";
 }
 
 //----- Données du problème -----
@@ -36,7 +35,7 @@ constraints {
   /*Ouest*/
   (Var["O"] + Var["N-O"] + Var["S-O"]) >= mini_y;
 
-	sum( nb_soldats in Var ) nb_soldats == 12;
+	sum( name in nomVar ) Var[name] == 12;
 }
 
 //----- Post-traitement -----
