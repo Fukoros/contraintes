@@ -22,7 +22,7 @@ constraints {
 /*** Post-traitement  ***/
 execute {
   writeln("New solution");
-  writeln(Cases);
+  writeln("\t",Cases);
 }
 
 include "./../shared/allSolutions.mod";
