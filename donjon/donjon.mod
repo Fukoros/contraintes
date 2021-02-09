@@ -13,7 +13,7 @@ using CP;
 execute {
 	cp.param.searchType = "DepthFirst";
 	cp.param.workers = 1;
-  cp.param.log.Verbosity = "Quiet";
+  cp.param.logVerbosity = "Quiet";
   /*
   cp.param.logPeriod = <int> */
 }
