@@ -13,7 +13,7 @@ execute {
 }
 
 //----- Données du problème -----
-int n = 5;
+int n = 4;
 
 //----- Variables et domaines -----
 range d = 1..n;
