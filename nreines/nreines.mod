@@ -6,17 +6,39 @@
 using CP;
 
 //----- Parametrage Solveur -----
-// TODO
+execute {
+	cp.param.searchType = "DepthFirst";
+	cp.param.workers = 1;
+	cp.param.logVerbosity = "Quiet";
+}
 
 //----- Données du problème -----
-// TODO
- 
+int n = 4;
+
 //----- Variables et domaines -----
-// TODO
+range d = 1..n;
+dvar int lines[n] in d;
 
 //----- Contraintes -----
-// TODO
+constraints{
+  //Colonnes differente
+  forall (ordered i, j in d){
+    lines[i] != lines[j];
+  }
+
+  //Diagonale differente
+  forall (ordered i, j in d){
+    lines[i] != lines[j]+j;
+    lines[i] != lines[j]-j;
+  }
+}
 
 //----- Post-traitement -----
-// TODO
+execute {
+  for (var i in d){
+    writeln(i, lines[i]);
+  }
+}
 
+include "./../shared/displayFirstAndCountSolutions.mod";
+//include "./../shared/allSolutions.mod";
