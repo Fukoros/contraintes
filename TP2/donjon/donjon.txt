@@ -11,3 +11,15 @@ On admettra qu'un garde placé sur un coté ne peut regarder que dans la directi
 correspondant à ce côté, mais qu'un garde placé dans un des coins peut regarder 
 simultanément dans les directions correspondant aux deux côtés adjacents.
 *********************************************/
+
+Variable :
+Soldat_1 
+...
+Soldat_12
+
+
+Domaine : D = {d,...,d}
+avec d = {N, N-E, E, S-E, S, S-O, O, O-N}
+d = {1, 2, 3, 4, 5, 6, 7, 8}
+
+Contraintes :
