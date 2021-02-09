@@ -36,12 +36,11 @@ constraints {
   /*Ouest*/
   (Var["O"] + Var["N-O"] + Var["S-O"]) >= mini_y;
 	/*Somme des toutes les positions*/
-	sum( name in nomVar ) Var[name] == n;
+	sum( name in nomVar ) Var[name] == 12;
 }
 
 //----- Post-traitement -----
 execute {
-	writeln(sum( name in nomVar ) Var[name]);
   writeln(Var["N-O"], "-", Var["N"], "-", Var["N-E"]);
   writeln("|", "   ", "|");
   writeln(Var["O"], "   ", Var["E"]);
