@@ -28,8 +28,8 @@ constraints{
 
   //Diagonale differente
   forall (ordered i, j in d){
-    lines[i] != lines[j]+j;
-    lines[i] != abs(lines[j]-j);
+    lines[i] != lines[j]+(j-i);
+    lines[i] != abs(lines[j]-(j-i));
   }
 }
 

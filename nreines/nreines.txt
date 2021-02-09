@@ -27,6 +27,7 @@ Contraintes :
 /*Colonnes differente*/
 line_x != line_y (y!=x)
 
+/*Diagonale diff
 line_x != line_(x+y)+y
 line_x != line_(x+y)-y
 
