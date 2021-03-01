@@ -71,10 +71,10 @@ constraints {
   Var["violoniste"] == Var["jus de fruits"];
 
   //Le renard est dans la maison voisine du medecin.
-  Var["renard"] == Var["medecin"]-1 or Var["renard"] == Var["medecin"]+1;
+  Var["renard"] == Var["medecin"]-1 || Var["renard"] == Var["medecin"]+1;
 
   //Le cheval est a cote de celle du diplomate.
-  Var["cheval"] == Var["diplomate"]-1 or Var["cheval"] == Var["diplomate"]+1;
+  Var["cheval"] == Var["diplomate"]-1 || Var["cheval"] == Var["diplomate"]+1;
 }
 
 /*** Post-traitement  ***/
