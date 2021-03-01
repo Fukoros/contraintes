@@ -79,8 +79,21 @@ constraints {
 
 /*** Post-traitement  ***/
 execute {
-  writeln("Le zebre est dans la maison : ",Var["zebre"]);
-  writeln("Celui qui boit de l'eau est dans la maison : ",Var["eau"]);
+  for (var index in Nationalite){
+    writeln("Le ", index, " est dans la maison N°", Var[index]);
+  }
+  for (var index in Animaux){
+    writeln("Le ", index, " est dans la maison N°", Var[index]);
+  }
+  for (var index in Profession){
+    writeln("Le ", index, " est dans la maison N°", Var[index]);
+  }
+  for (var index in Couleur){
+    writeln("La maison ", index, " est la maison N°", Var[index]);
+  }
+  for (var index in Boisson){
+    writeln("On boit du ", index, " dans la maison N°", Var[index]);
+  }
 }
 
 include "./../shared/displayFirstAndCountSolutions.mod";
