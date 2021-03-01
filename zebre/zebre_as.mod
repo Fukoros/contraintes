@@ -14,14 +14,14 @@ execute {
 }
 
 /*** Données du problème  ***/
-int d = 1..5;
+range d = 1..5;
 
 /*** Variables et domaines  ***/
 {string} Nationalite = {"anglais", "espagnol", "japonais", "italien", "norvegien"};
 {string} Animaux = {"chien", "escargots", "cheval", "renard", "zebre"};
 {string} Profession = {"peintre", "sculpteur", "diplomate", "violoniste", "medecin"};
 {string} Couleur = {"rouge", "blanche", "bleue", "verte", "jaune"};
-{string} Boissson = {"lait", "the", "cafe", "jus de fruit", "eau"};
+{string} Boisson = {"lait", "the", "cafe", "jus de fruit", "eau"};
 
 dvar int Var[Nationalite union Animaux union Profession union Couleur union Boisson] in d;
 
