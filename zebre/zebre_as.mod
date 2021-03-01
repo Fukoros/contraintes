@@ -68,7 +68,7 @@ constraints {
   Var["norvegien"] == Var["bleue"];
 
   //Le violoniste boit des jus de fruits.
-  Var["violoniste"] == Var["jus de fruits"];
+  Var["violoniste"] == Var["jus de fruit"];
 
   //Le renard est dans la maison voisine du medecin.
   Var["renard"] == Var["medecin"]-1 || Var["renard"] == Var["medecin"]+1;
