@@ -1,9 +1,9 @@
 /*********************************************
-Le problème du zèbre : 
+Le problème du zèbre :
 
-Cinq personnes de nationalités différentes habitent les cinq 
-premières maisons d'une rue. Elles exercent cinq professions différentes 
-et ont chacune une boisson et un animal favori tous différents. 
+Cinq personnes de nationalités différentes habitent les cinq
+premières maisons d'une rue. Elles exercent cinq professions différentes
+et ont chacune une boisson et un animal favori tous différents.
 Les cinq habitations sont également de cinq couleurs différentes.
 
 On sait par ailleurs que :
@@ -18,11 +18,36 @@ On sait par ailleurs que :
 9. Le diplomate habite la maison jaune.
 10. On boit du lait dans la maison du milieu.
 11. Le norvégien habite à coté de la maison bleue.
-12. Le violoniste boit des jus de fruits. 
+12. Le violoniste boit des jus de fruits.
 13. Le renard est dans la maison voisine du médecin.
 14. Le cheval est à coté de celle du diplomate.
 
 Le problème consiste à retrouver pour chacun des habitants
-quelle est sa nationalité, son animal favori, sa profession, la couleur de sa maison 
+quelle est sa nationalité, son animal favori, sa profession, la couleur de sa maison
 et notamment à identifier celui qui boit de l'eau et celui qui élève un zèbre.
 *********************************************/
+
+Variables :
+//nationalité
+Anglais, Espagnol, Japonais, Italien, norvégien
+
+//animal
+chien, escargots, cheval, renard, zèbre
+
+//profession
+peintre, sculpteur, diplomate, violoniste, médecin
+
+//couleur maison
+rouge, blanche, bleue, verte, jaune
+
+//boit
+lait, thé, café, jus de fruit, eau
+
+Domaines :
+D = {d,...,d}
+with d = {1,..,5} où 1 est la premiere maison a gauche et 5 la dernière maison à gauche
+
+Contraintes :
+//Differences entre dans la même catégorie
+
+//
