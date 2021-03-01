@@ -32,7 +32,7 @@ constraints {
   forall (i, j in Animaux : i < j) Var[i] != Var[j];
   forall (i, j in Profession : i < j) Var[i] != Var[j];
   forall (i, j in Couleur : i < j) Var[i] != Var[j];
-  forall (i, j in Boissson : i < j) Var[i] != Var[j];
+  forall (i, j in Boisson : i < j) Var[i] != Var[j];
 
   //L anglais habite la maison rouge
   Var["anglais"] == Var["rouge"];
