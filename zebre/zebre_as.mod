@@ -79,20 +79,29 @@ constraints {
 
 /*** Post-traitement  ***/
 execute {
+  writeln("Nationalite");
   for (var index in Nationalite){
-    writeln("Le ", index, " est dans la maison N°", Var[index]);
+    writeln("\t","Le ", index, " est dans la maison N°", Var[index]);
   }
+  writeln("-------------");
+  writeln("Animaux");
   for (var index in Animaux){
-    writeln("Le ", index, " est dans la maison N°", Var[index]);
+    writeln("\t","Le ", index, " est dans la maison N°", Var[index]);
   }
+  writeln("-------------");
+  writeln("Profession");
   for (var index in Profession){
-    writeln("Le ", index, " est dans la maison N°", Var[index]);
+    writeln("\t","Le ", index, " est dans la maison N°", Var[index]);
   }
+  writeln("-------------");
+  writeln("Couleur");
   for (var index in Couleur){
-    writeln("La maison ", index, " est la maison N°", Var[index]);
+    writeln("\t","La maison ", index, " est la maison N°", Var[index]);
   }
+  writeln("-------------");
+  writeln("Boisson");
   for (var index in Boisson){
-    writeln("On boit du ", index, " dans la maison N°", Var[index]);
+    writeln("\t","On boit du ", index, " dans la maison N°", Var[index]);
   }
 }
 
